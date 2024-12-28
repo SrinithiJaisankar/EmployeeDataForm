@@ -1,0 +1,120 @@
+.container {
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d4ebf8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 500px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.style::placeholder {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  color: #777;
+}
+
+.Table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.Tdata {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.style {
+  width: 100%;
+  padding: 8px;
+}
+
+.Input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Id {
+  width: 160px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #0a3981;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #030303;
+}
+
+.btnDisabled:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+  border: none;
+}
+
+.btnDisabled:disabled:hover {
+  background-color: grey;
+  color: white;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+  padding-top: 2px;
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
+}
+
+.place {
+  resize: none;
+
+  font-size: small;
+}
+
+.symbol {
+  color: red;
+  font: size 14px;
+  vertical-align: middle;
+}
+
+.colon {
+  width: 10px;
+  text-align: center;
+}

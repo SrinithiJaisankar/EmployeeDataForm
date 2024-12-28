@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Employee Info</title>
+        <link rel="stylesheet" href="emp.css">
+        <script defer src="emp.js"></script>
+    </head>
+
+<body class="body">  
+<div class="container">
+    
+    <form id="form"     autocomplete="off">
+        <table class="Table">
+
+            <tr>
+                <td colspan="2" class="Tdata"><h1 class="heading">Employee Information Form  </h1></td>
+            </tr>
+            <tr class="Input">
+                <td class="Id  Tdata" >Employee ID   <span class="symbol">*</span> </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <select id="employeeId" required disabled  onchange="selectEmployee();hideErrorMessages()">
+                        <option value="0">Select employee ID</option>
+                       
+                    </select>
+                    <span id="optionEmpId" class="error">Select employee id!</span>
+                    
+                </td>
+            </tr>
+            <tr class="Input">
+                <td class="Id Tdata">Name <span class="symbol">*</span> </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <input class="place style" id="Nameinput" type="text" placeholder="Enter name" maxlength="50" name="name" required disabled oninput="hideErrorMessages()">
+                    <span id="nameError" class="error"></span>
+                </td>
+            </tr>
+            </tr>
+              <tr class="Input">
+                <td class="email Id  Tdata">Email  <span class="symbol">*</span>  </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <input  type="email" class="email  style  place" id="Emailinput" placeholder="Enter email" name="email" required disabled oninput="hideErrorMessages()">
+                    <span class="error" id="emailError">Invalid email </span>
+                </td>
+            </tr>
+            
+            <tr class="Input">
+                <td class="sex Id Tdata">Gender <span class="symbol">*</span> </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <select name="gender" required disabled  onchange="hideErrorMessages()">
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span id="genderError" class="error">Gender is required!</span>
+                    
+                </td>
+            </tr>
+            
+            <tr class="Input">
+                <td class="mobile Id Tdata">Phone Number  <span class="symbol">*</span>  </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <input class="place  style" id="phone"  type="text" placeholder="Enter phone number" maxlength="10" name="phone" required disabled oninput="handlePhoneInput(event)">
+                    <span class="error" id="phoneError">Invalid phone number</span>
+                </td>
+            </tr>
+            <tr class="Input">
+                <td class="Id Tdata">Address <span class="symbol">*</span>  </td>
+                <td><span class="colon"> :</span></td>
+                <td class="Tdata">
+                    <textarea class="place style" id="address" name="address" placeholder="Enter address" maxlength="500" required  disabled  oninput="hideErrorMessages()"></textarea>
+                    <span id="addressError" class="error"></span>
+                </td>
+            </tr>
+            
+        </table>
+        <div class="button" id="box">
+            <button type="button" id="addBtn" class="btn btnDisabled"  onclick="addEmployee()">Add </button>
+            <button type="button" id="editBtn" class="btn btnDisabled" onclick="editEmployee()" disabled >Edit</button>
+            <button type="button" id="deleteBtn" class="btn btnDisabled" onclick="deleteEmployee()"disabled>Delete</button>
+            <button type="button" id="saveBtn" class="btn btnDisabled" onclick="saveEmployee()" disabled>Save</button>
+            <button type="button" id="cancelBtn" class="btn btnDisabled" onclick="cancelChanges()"disabled>Cancel</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
